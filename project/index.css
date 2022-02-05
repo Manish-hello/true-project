@@ -3,6 +3,7 @@
 	--color2: rgba(255,255,255,0.5);
 	--color3:#41295a;
 	--color4: #2F0743;
+	--color5: rgba(3, 202, 252,1);
 }
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 *{
@@ -28,8 +29,12 @@ body{
 		rgba(255,255,255,0.6),
 		rgba(255,255,255,0.2));
 	border-radius: 1rem;
-	box-shadow: .1rem .1rem .3rem 0 rgba(255,255,255,0.5);
 	display: flex;
+	background: url(pexels-s-migaj-747964.jpg);
+	background-size: cover;
+	background-position: top center;
+	position: absolute;
+	z-index: 1;
 }
 .side-bar{
 	/*flex: 1;*/
@@ -71,41 +76,86 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 1rem;
+	justify-content: space-evenly;
 	line-height: 5rem;
 	text-decoration: none;
+}
+.image,.link{
+	margin: .5rem 0rem;
 }
 .link a:hover{
 	color: orange;
 }
-.content h1{
-	color:var(--color3);
-	position: relative;
-	font-size: 2rem;
-	margin: 2rem;
-}
+
 /*.note,.referance-links,.about{
 	padding: 1rem;
 	line-height: 5rem;
 	text-decoration: none;
 }*/
-.rectangle{
+.section{
+	margin: 2rem;
+}
+.section h1{
+	color:crimson;
+	position: absolute;
+	font-size: 2rem;
+	margin: 0rem;
+}
+.main-box::after{
+   content: '';
+   position: absolute;
+   left: 0;
+   top: 0;
+   height: 100%;
+   width: 100%;
+   background: black;
+   border-radius: 1rem;
+   opacity: .5;
+   z-index: -1;
+
+}
+.container{
+	min-height: 80vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	justify-content: center;
 	position: relative;
-	top: -2rem;
-	height: .7rem;
-	width: 9rem;
-   background: linear-gradient(to right,#41295a,#2F0743);
-	left: .5rem;
-	border-radius: 20px;
+}
+.container h1{
+	display: flex;
+	width: fit-content;
+	font-size: 2rem;
+	position: relative;
+	color: white;
+}
+.container a{
+	display: inline-block;
+	padding: 5px 15px;
+	color: white;
+	border: none;
+	background: transparent;
+	border: 2px solid crimson;
+	text-decoration: none;
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	margin-top: 10px;
+	transition: .2s ease;
+	transition-property: background-color,color;
+}
+.container a:hover{
+	background-color: crimson;
 }
 @media (max-width: 800px){
 	.link{
 		font-size: 6rem;
 	}
-	.wrapper>img{
+	/*.wrapper>img{
 		height:70%;
 		width: 70%;
-	}
+	}*/
 	.main-box,.side-bar{
 		min-height: 60vh;
 	}
@@ -123,18 +173,15 @@ body{
 		position: relative;
 		top: .5rem;
 	}
-   .content h1{
-   	font-size: .7rem;
-   	top: -1rem;
-   	left: -1rem;
-   }
-   .rectangle{
+   
+.section{
 	position: relative;
-	top: -3rem;
-	height: .4rem;
-	width: 3rem;
-	 background: linear-gradient(to right,#41295a,#2F0743);
-	left: .5rem;
-	border-radius: 20px;
+	margin: 1rem;
+}
+.section h1{
+	color:crimson;
+	position: absolute;
+	font-size: .7rem;
+	margin: 0rem;
 }
 }

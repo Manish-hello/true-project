@@ -4,16 +4,19 @@ for(let i=0;i<300;i++){
 	shadow+=(shadow? ",":"")+ i*1+"px " +i*1+"px 0 #2F0743";
 }
 box.style.boxShadow=shadow;
-let page=document.querySelector(".pages")
+let page=document.querySelector(".top-text")
 function link1(){
-   page.textContent="Your are inside the note.";
+   page.textContent="HOME"
 }
 function link2(){
-   page.textContent="Your are inside the referance.";
+   page.textContent="NOTES";
 }
 function link3(){
-   page.textContent="Your are inside the about.";
+   page.textContent="REFERANCE";
 }
 function link4(){
-   page.textContent="Your are inside the uplodes.";
+   page.textContent="ABOUT";
+}
+function link5(){
+   page.textContent="UPLOADES";
 }
