@@ -21,7 +21,7 @@ body{
 	display:flex;
 	justify-content: center;
 	align-items: center;
-	background: url("/bg1.jpg");
+	background: url("bg1.jpg");
 	background-size: cover;
 }
 .main-box{
