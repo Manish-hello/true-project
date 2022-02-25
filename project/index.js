@@ -1,4 +1,6 @@
 let page=document.querySelector(".top-text")
+let ham=document.querySelector(".hm")
+let nav=document.querySelector("#menu")
 function link1(){
    page.textContent="HOME"
 }
@@ -13,4 +15,8 @@ function link4(){
 }
 function link5(){
    page.textContent="UPLOADES";
+}
+function hamburger(){
+   ham.classList.toggle("active");
+   nav.classList.toggle("active");
 }
